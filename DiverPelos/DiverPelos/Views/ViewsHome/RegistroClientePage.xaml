@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiverPelos.Views.ViewsHome.RegistroClientePage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+            <Grid RowSpacing="25">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="1" HorizontalOptions="Center">
+                    <Label Text="Registrar Cliente" TextColor="#767677" FontSize="20" WidthRequest="300" FontAttributes="None" HorizontalTextAlignment="Center"/>
+                    <Label Text="Ingrese los datos." TextColor="Gray" FontSize="13" WidthRequest="300" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" HorizontalOptions="Center">
+                    <Label Text="Nombre Completo " TextColor="#767677" FontSize="15" WidthRequest="300" FontAttributes="Bold"/>
+                    <Entry WidthRequest="300" HeightRequest="50"
+                           Placeholder="Nombre Completo" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center"
+                           HorizontalTextAlignment="Start" MaxLength="100" Keyboard="Text" Text="{Binding NombreTxt, Mode=TwoWay}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="3" HorizontalOptions="Center">
+                    <Label Text="Cedula" TextColor="#767677" FontSize="15" WidthRequest="300" FontAttributes="Bold"/>
+                    <Entry WidthRequest="300" HeightRequest="50"
+                           Placeholder="Cedula" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center"
+                           HorizontalTextAlignment="Start" MaxLength="20" Keyboard="Numeric" Text="{Binding CedulaTxt, Mode=TwoWay}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="4" HorizontalOptions="Center">
+                    <Label Text="Telefono" TextColor="#767677" FontSize="15" WidthRequest="300" FontAttributes="Bold"/>
+                    <Entry WidthRequest="300" HeightRequest="50"
+                           Placeholder="Telefono" FontSize="10" HorizontalOptions="Center" VerticalOptions="Center"
+                           HorizontalTextAlignment="Start" MaxLength="20" Keyboard="Telephone" Text="{Binding TelefonoTxt, Mode=TwoWay}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="5" HorizontalOptions="Center">
+                    <Label Text="Direccion" TextColor="#767677" FontSize="15" WidthRequest="300" FontAttributes="Bold"/>
+                    <Entry WidthRequest="300" HeightRequest="50"
+                           Placeholder="Direccion" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center"
+                           HorizontalTextAlignment="Start" MaxLength="10" Keyboard="Text" Text="{Binding DireccionTxt, Mode=TwoWay}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="6" HorizontalOptions="Center">
+                    <Label Text="Email" TextColor="#767677" FontSize="15" WidthRequest="300" FontAttributes="Bold"/>
+                    <Entry WidthRequest="300" HeightRequest="50"
+                           Placeholder="Email" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center"
+                           HorizontalTextAlignment="Start" MaxLength="50" Keyboard="Email" Text="{Binding EmailTxt, Mode=TwoWay}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="8" HorizontalOptions="Center" WidthRequest="275" Orientation="Vertical" Margin="15">
+                    <Frame Padding="0,4,0,4" HasShadow="True">
+                        <Button Text="Aceptar" HeightRequest="35" TextColor="Black" BackgroundColor="White" FontSize="12"
+                                FontAttributes="Bold" Command="{Binding RegistroClienteCommand}"/>
+                    </Frame>
+                    <ActivityIndicator Color="Black"></ActivityIndicator>
+                </StackLayout>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiverPelos.Views.ViewsAcceso.StartPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout HorizontalOptions="Center" Grid.Column="0" Grid.Row="0" Margin="0,0,0,20">
+                    <Image Source="logo.png" HeightRequest="200" WidthRequest="200"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Center" Grid.Column="0" Grid.Row="1">
+                    <Label Text="BIENVENIDO" TextColor="#333333" FontSize="15" FontAttributes="None" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+        <StackLayout Grid.Column="0" Grid.Row="2" HorizontalOptions="Center" Spacing="10">
+            <Frame Padding="0,5,0,5" HasShadow="True">
+                <Button Text="Registrarte" HeightRequest="35" WidthRequest="185" TextColor="#333333" BackgroundColor="White" FontSize="10" Clicked="RegisterNav_Clicked"/>
+            </Frame>
+            <Frame Padding="0,5,0,5" HasShadow="True">
+                        <Button Text="Iniciar Seccion" AutomationId="loginButton" HeightRequest="35" WidthRequest="185" TextColor="#333333" BackgroundColor="White" FontSize="10" Clicked="LoginNav_Clicked"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout HorizontalOptions="Center" Grid.Column="0" Grid.Row="4">
+            <Label Text=" 2020 DiverPelos.Inc, All Rights Reserved" TextColor="#333333" FontSize="10" HorizontalTextAlignment="Center"/>
+
+        </StackLayout>
+        </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

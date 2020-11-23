@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiverPelos.Views.ViewsAcceso.LoginPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="1" HorizontalOptions="Center">
+                    <Label Text="Bienvenido" TextColor="Black" FontSize="22" WidthRequest="300" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout Grid.Row="2" HorizontalOptions="Center">
+                    <Label Text="Inicia sesión para continuar" TextColor="Gray" FontSize="13" WidthRequest="300" FontAttributes="Bold"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="3" HorizontalOptions="Center">
+                    <Label Text="Email" TextColor="#767677" FontSize="15" WidthRequest="300" FontAttributes="Bold"/>
+                    <Entry WidthRequest="300" HeightRequest="50"
+                           Placeholder="Email" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center"
+                           HorizontalTextAlignment="Start" MaxLength="50" Text="{Binding EmailTxt, Mode=TwoWay}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="4" HorizontalOptions="Center">
+                    <Label Text="Contraseña" TextColor="#767677" FontSize="15" WidthRequest="300" FontAttributes="Bold"/>
+                    <Entry WidthRequest="300" HeightRequest="50"
+                           Placeholder="Contraseña" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center" IsPassword="True"
+                           HorizontalTextAlignment="Start" MaxLength="20" Text="{Binding PasswordTxt, Mode=TwoWay}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="5" HorizontalOptions="Center" WidthRequest="300" Orientation="Horizontal">
+                    <CheckBox HorizontalOptions="Start" VerticalOptions="Center" Color="Black"/>
+                    <Label Text="Recordarme" TextColor="#767677" VerticalOptions="Center" FontSize="15" FontAttributes="Bold"/>
+                    <Image WidthRequest="15"/>
+                    <Button Text="Recordar Contraseña" TextColor="#B4995D"
+                            WidthRequest="150" HeightRequest="45"
+                            FontSize="11" BackgroundColor="Transparent" FontAttributes="Bold" VerticalOptions="Start" 
+                            HorizontalOptions="Start" Command="{Binding RecordarCommand}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="6" HorizontalOptions="Center" Orientation="Vertical" Margin="15">
+                    <ActivityIndicator Color="#B4955D"></ActivityIndicator>
+                    <Frame Padding="0,4,0,4" HasShadow="True">
+                        <Button Text="Iniciar Seccion" HeightRequest="35" TextColor="#B4995D" BackgroundColor="White" 
+                                FontSize="12" FontAttributes="Bold" Command="{Binding LoginCommand}"/>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

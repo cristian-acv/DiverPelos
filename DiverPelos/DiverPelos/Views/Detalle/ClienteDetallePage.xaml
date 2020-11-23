@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiverPelos.Views.Detalle.ClienteDetallePage"
+             Title="Detalle Cliente">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+            <Grid RowSpacing="25">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="1" HorizontalOptions="Center">
+                    <Label Text="Nombre " TextColor="#767677" FontSize="20" WidthRequest="300" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding NombreTxt}" TextColor="Gray" FontSize="18" WidthRequest="300" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" HorizontalOptions="Center">
+                    <Label Text="Cedula " TextColor="#767677" FontSize="20" WidthRequest="300" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding CedulaTxt}" TextColor="Gray" FontSize="18" WidthRequest="300" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="3" HorizontalOptions="Center">
+                    <Label Text="Telefono" TextColor="#767677" FontSize="20" WidthRequest="300" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding TelefonoTxt}" TextColor="Gray" FontSize="18" WidthRequest="300" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="4" HorizontalOptions="Center">
+                    <Label Text="Direccion" TextColor="#767677" FontSize="20" WidthRequest="300" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding DireccionTxt}" TextColor="Gray" FontSize="18" WidthRequest="300" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="5" HorizontalOptions="Center">
+                    <Label Text="Email" TextColor="#767677" FontSize="20" WidthRequest="300" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding EmailTxt}" TextColor="Gray" FontSize="18" WidthRequest="300" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="6" HorizontalOptions="Center" WidthRequest="275" Orientation="Vertical" Margin="15">
+                    <Frame Padding="0,4,0,4" HasShadow="True">
+                        <Button Text="Eliminar" HeightRequest="35" TextColor="Black" BackgroundColor="White" FontSize="12"
+                                FontAttributes="Bold" Command="{Binding RegistroCommand}"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Grid.Row="7" HorizontalOptions="Center" WidthRequest="275" Orientation="Vertical" Margin="15">
+                    <Frame Padding="0,4,0,4" HasShadow="True">
+                        <Button Text="Modificar" HeightRequest="35" TextColor="Black" BackgroundColor="White" FontSize="12"
+                                FontAttributes="Bold" Command="{Binding RegistroCommand}"/>
+                    </Frame>
+                    <ActivityIndicator Color="Black"></ActivityIndicator>
+                </StackLayout>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiverPelos.Views.MasterDetail.MyMasterDetailPageDetail"
+             Title="Agenda">
+
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <ActivityIndicator IsRunning="{Binding IsLoading}"
+                               IsEnabled="{Binding IsLoading}"
+                               IsVisible="{Binding IsLoading}"
+                               Color="Aqua"/>
+
+            <ListView ItemsSource="{Binding Turno}"
+                            SelectionMode="Single" ItemTapped="OnItemSelected" SeparatorColor="#767677" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Servicio}"
+                     Detail="{Binding Fecha}" TextColor="Black"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+
+            </ListView>
+            <ImageButton  Source="icono.xml" Grid.Row="1"   
+                            BorderWidth="2"  BackgroundColor="White" 
+                 CornerRadius="30"  HorizontalOptions="End" 
+                            WidthRequest="60" HeightRequest="60" Margin="0,0,40,35" 
+                            VerticalOptions="End" Command="{Binding RegistroTurnoCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
